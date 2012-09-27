@@ -1,4 +1,4 @@
-# cached-operation
+# cached-operation [![Build Status][1]][2]
 
 Cache an asynchronous operation
 
@@ -30,3 +30,6 @@ operation("foo", function (foo) {
  - Raynos
 
 ## MIT Licenced
+
+  [1]: https://secure.travis-ci.org/Raynos/cached-operation.png
+  [2]: http://travis-ci.org/Raynos/cached-operation
