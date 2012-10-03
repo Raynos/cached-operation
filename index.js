@@ -3,11 +3,17 @@ var CachedEmitter = require("cached-events")
 
 module.exports = CachedOperation
 
-function CachedOperation(f, getKey) {
+function CachedOperation(f, opts) {
     var keys = {}
         , emitter = CachedEmitter()
 
-    getKey = getKey || defaultGetKey
+    opts = opts || {}
+
+    var getKey = opts.getKey || defaultGetKey
+
+    if (opts.maxListeners) {
+        emitter.setMaxListeners(opts.maxListeners)
+    }
 
     return operation
 
